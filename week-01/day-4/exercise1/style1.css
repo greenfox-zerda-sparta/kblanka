@@ -1,0 +1,15 @@
+body {
+  color: #EC1500;
+  font-family: 'Times New Roman';
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.elem {
+  background-color: #FFFF00;
+  border: 5px solid #000;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+}

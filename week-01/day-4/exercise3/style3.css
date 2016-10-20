@@ -1,0 +1,29 @@
+body {
+  font-family: 'Times New Roman';
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.elem {
+  border: 5px solid #000;
+  margin: 0px;
+  padding: 20px;
+  width: 200px;
+}
+
+#team1 {
+  color: #2F2065;
+  background-color: #FFFF00;
+  border: 20px solid #008001;
+  margin: 10px;
+  width: 250px;
+}
+
+#team2 {
+  color: #C3332B;
+  background-color: #00FFFF;
+  border: 20px solid #008001;
+  margin: 10px;
+  width: 250px;
+}
