@@ -1,6 +1,54 @@
-body {
-  font-family: 'Josefin Sans', sans-serif;
+body  {
+  margin: 0;
   color: #222;
+}
+
+.headimage {
+    position: relative;
+}
+
+img {
+  border-top: 5px solid #000;
+  display: block;
+  height: 400px;
+  margin: 0 auto 0 auto; /* top | right | bottom | left */
+  opacity: 0.5;
+  width: 1275px;
+}
+
+.centertext {
+  color: solid #000;
+  left: 0;
+  font-weight: bold;
+  font-family: font-family: 'Abril Fatface', cursive;
+  position: absolute;
+  top: 0;
+  margin-left: 500px;
+  margin-right: auto;
+  margin-top: 170px;
+  width: 600px;
+}
+
+.centertext1 {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+.centertext2 {
+  margin-top: 0;
+  font-size: 90px;
+}
+
+article {
+  font-family: 'Josefin Sans', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+}
+
+.beginpart {
+  font-size: 21px;
+  margin-top: 50px;
 }
 
 #firstrow {
@@ -9,26 +57,29 @@ body {
 
 h1 {
   font-size: 25px;
-  text-transform: uppercase;
   margin-top: 53px;
   margin-bottom: 53px;
+  text-transform: uppercase;
 }
 
 h2 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 h3 {
-  margin-top: 0;
   font-style: italic;
+  margin-top: 0;
 }
 
-.beginpart {
-  font-size: 21px;
+.examplepart0 {
+  font-size: 20px;
 }
 
+li {
+  margin-top: 10px;
+ }
 
-#endingpart {
-  border-top: 5px;
-  background-color: "red";
-}
+.endingpart {
+  border-top: 3px solid #000;
+  margin-top: 50px;
+ }
