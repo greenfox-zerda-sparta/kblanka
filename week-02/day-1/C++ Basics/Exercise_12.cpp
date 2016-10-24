@@ -4,12 +4,13 @@
 using namespace std;
 
 int main() {
-	string n = "The result is: ";
-	int a = 2;
-	int b = 3;
-	cout << n << a << "+" << b <<".";
+	string m = "Apple";
+	for(int a = 1; a <= 2; ++a){
+		m+= m;
+	}
+	cout << m;
 
-	// write out n, a, b in the same line
+//fill the m variable with its content 4 times
 
 	return 0;
 }

@@ -4,13 +4,13 @@
 using namespace std;
 
 int main() {
-	int u = 123;
-	if (u>100)
-		cout << "Hooray!";
-	else
-		cout << "No Hooray. :(";
+	string n = "The result is: ";
+	string a = "55";
+	string b = "kg";
+	cout << n << a << b <<".";
 
-	// print 'Hooray!' if the number is bigger than 100
+	// concat the product of a and b to the n string
 
 	return 0;
+
 }

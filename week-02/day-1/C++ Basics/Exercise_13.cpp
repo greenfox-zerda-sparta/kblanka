@@ -5,12 +5,11 @@ using namespace std;
 
 int main() {
 	string n = "The result is: ";
-	string a = "55";
-	string b = "kg";
-	cout << n << a << b <<".";
+	int a = 2;
+	int b = 3;
+	cout << n << a << "+" << b <<".";
 
-	// concat the product of a and b to the n string
+	// write out n, a, b in the same line
 
 	return 0;
-
 }
