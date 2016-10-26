@@ -4,7 +4,8 @@ using namespace std;
 
 int main() {
   int numbers[] = {5, 6, 7, 8, 9};
-  int* number_pointer = &numbers[2];
+  int* number_pointer = &numbers[0];
+  number_pointer = number_pointer + 2;
   cout << "The value: " << *number_pointer << ", the address: " << number_pointer << ".";
 
   // The "number_pointer" should point to the third element of the array called "numbers",
