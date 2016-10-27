@@ -6,7 +6,6 @@ string safeConcat(string part1, string part2) {
 	return part1+part2;
 }
 //Implement this function to create and return a new string which contains the two parts concatenated.
-
 int main(int argc, char** argv) {
 	string a = "kutya";
 	string b = " es macska";

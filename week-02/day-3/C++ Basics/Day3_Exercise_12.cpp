@@ -8,9 +8,6 @@ void safeUnion(int *a, int l_a, int *b, int l_b, int *result, int l_res) {
 	for (int i = 0; i < l_res; i++) {
 		result[i+l_a] = b[i];
 	}
-
-	//cout << result;
-
 	// Implement this function to create the union of a and b into the array result!
 	return;
 }

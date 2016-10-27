@@ -21,7 +21,6 @@ int main() {
   cout << "high_number: " << high_number << endl;
   cout << "low_number: " << low_number << endl;
 
-
   // Please fix the problem and swap the value of the variables,
   // without using the "high_number" and the "low_number" variables.
 

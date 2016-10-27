@@ -20,9 +20,7 @@ int main() {
   cout << "second version:" << endl;
   cout << "high_number_pointer: " << high_number_pointer << endl;
   cout << "low_number_pointer: " << low_number_pointer << endl;
-
   // Please fix the problem and swap where the pointers point,
   // without using the "&" operator.
-
   return 0;
 }

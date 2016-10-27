@@ -14,7 +14,6 @@ void sortAscending(int *array, int length) {
     }
 }
 // Implement this function to sort the array in an ascending order.
-
 void sortDescending(int *array, int length) {
     int temp;
     for(int i3=0; i3<=length; i3++) {
@@ -28,7 +27,6 @@ void sortDescending(int *array, int length) {
     }
 }
 // Implement this function to sort the array in a descending order.
-
 void printArray(int *array, int length) {
 	cout << "{";
 	for(int i=0; i<length; i++){

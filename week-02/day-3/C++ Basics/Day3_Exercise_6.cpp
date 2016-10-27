@@ -11,9 +11,7 @@ int main() {
 
   cout << "high_number_pointer's memory address: " << high_number_pointer << endl;
   cout << "other_high_number_pointer's memory address: " << other_high_number_pointer << endl;
-
   // The "other_high_number_pointer" should point to the same memory address
   // without using the "&" operator.
-
   return 0;
 }

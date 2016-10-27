@@ -7,10 +7,8 @@ int main() {
   int* number_pointer = &numbers[0];
   number_pointer = number_pointer + 2;
   cout << "The value: " << *number_pointer << ", the address: " << number_pointer << ".";
-
   // The "number_pointer" should point to the third element of the array called "numbers",
   // than please print its value with it. Solve the problem without reusiong the "&" operator
   // for geting the address of the third element.
-
   return 0;
 }
