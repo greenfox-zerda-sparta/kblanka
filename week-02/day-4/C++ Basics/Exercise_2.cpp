@@ -11,7 +11,7 @@ void printArray(int *array, int length) {
 	cout << "{";
 	for (int j = 0; j < length; j++){
 		cout << array[j];
-		if (j < (length-1))
+		if (j < (length - 1))
 			cout << ",";
 	}
 	cout << "}";

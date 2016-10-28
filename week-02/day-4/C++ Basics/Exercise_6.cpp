@@ -6,7 +6,7 @@ using namespace std;
 int countfolloweven(int *array, int length) {
 	int a = 0;
 	for (int i = 0; i < length-1; i++) {
-		if (array[i] % 2 == 0 && array[i+1] % 2 == 0)
+		if (array[i] % 2 == 0 && array[i + 1] % 2 == 0)
 			a = a + 1;
 	}
 	return a;

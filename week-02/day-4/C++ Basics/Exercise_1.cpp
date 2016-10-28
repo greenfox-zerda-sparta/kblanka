@@ -10,9 +10,9 @@ void squareArray (int *array, int length) {
 
 void printArray(int *array, int length) {
 	cout << "{";
-	for(int i=0; i<length; i++){
+	for(int i = 0; i < length; i++){
 		cout << array[i];
-		if(i<length-1) {
+		if(i < length - 1) {
 			cout << ", ";
 		}
 	}
