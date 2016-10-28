@@ -23,6 +23,7 @@ int main() {
       cin >> answer;
       if (answer == 'Y')
         diamond (linenumber);
+        break;
       }
     }while (answer != 'X');
   cout << "END";
