@@ -4,10 +4,10 @@
 using namespace std;
 
 int* range(int from, int to, int step) {
-  float size = (to - from) / step;
+  float size = (to - from) / (float)step;
   int roundedsize = ceil(size);
   int* array = new int[roundedsize];
-  for (int j = 0; j <= roundedsize; j++) {
+  for (int j = 0; j < roundedsize; j++) {
     array[j] = from;
     from = from + step;
   }
@@ -30,14 +30,13 @@ return array;
  */
 
 int main() {
-  int from = 4;
+  int from = 2;
   int to = 19;
-  int step = 4;
-  float size = (to - from) / step;
+  int step = 2;
+  float size = (to - from) / (float)step;
   int roundedsize = ceil(size);
-
   int* array = range(from, to, step);
-  for (int i = 0; i <= roundedsize; i++) {
+  for (int i = 0; i < roundedsize; i++) {
     cout << array[i] << endl;
   }
 
