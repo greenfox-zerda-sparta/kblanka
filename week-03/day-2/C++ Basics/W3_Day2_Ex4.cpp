@@ -13,7 +13,7 @@ int allgold(Pirate array[], int length) {
   int sumgold = 0;
   for (int i = 0; i < length; i ++)
     sumgold = sumgold + array[i].gold_count;
-    cout << "Total gold of the pirates: " << sumgold << endl;
+  cout << "Total gold of the pirates: " << sumgold << endl;
   return sumgold;
 }
 
@@ -32,7 +32,6 @@ string richestlegless(Pirate array[], int length) {
     if (array[i].gold_count >= biggest && array[i].has_wooden_leg == true) {
       biggest = array[i].gold_count;
       richest = array[i].name;
-      cout << biggest << " " << richest << endl;
     }
   }
   return richest;
