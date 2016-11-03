@@ -9,23 +9,21 @@ struct Pirate {
   short int gold_count;
 };
 
-int allgold(Pirate array[], int length) {
+int all_gold(Pirate array[], int length) {
   int sumgold = 0;
   for (int i = 0; i < length; i ++)
     sumgold = sumgold + array[i].gold_count;
-  cout << "Total gold of the pirates: " << sumgold << endl;
   return sumgold;
 }
 
-int averagegold(Pirate array[], int length) {
+float average_gold(Pirate array[], int length) {
   int sumgold = 0;
   for (int i = 0; i < length; i ++)
     sumgold = sumgold + array[i].gold_count;
-  cout << "Average gold of the pirates: " << sumgold / length << endl;
-  return sumgold / length;
+  return (float)sumgold / (float)length;
 }
 
-string richestlegless(Pirate array[], int length) {
+string find_richest_legless(Pirate array[], int length) {
   int biggest = 0;
   string richest;
   for (int i = 0; i < length; i++) {
@@ -54,9 +52,9 @@ int main() {
     {"Morgan", false, 1}
   };
 
-  allgold(pirates, 6);
-  averagegold(pirates, 6);
-  cout << richestlegless(pirates, 6);
+  cout << "Total gold of the pirates: " << all_gold(pirates, 6) << endl;
+  cout << "Average gold of the pirates: " << average_gold(pirates, 6) << endl;
+  cout << "The richest pirate with wooden leg: " << find_richest_legless(pirates, 6) << endl;
 
     return 0;
 }
