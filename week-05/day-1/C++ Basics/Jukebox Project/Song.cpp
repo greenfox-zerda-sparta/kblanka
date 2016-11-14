@@ -36,6 +36,16 @@ double Song::get_average_rate() {
   return (this->rate / this->count_rate);
 }
 
+float Song::get_rate_count() {
+    return rate_count;
+}
+
+float Song::get_rate_sum() {
+    return rate_sum;
+}
+
+
+
 Song::~Song() {
 
 }

@@ -18,6 +18,8 @@ public:
   Jukebox();
   void add_song(Song& song);
   void rate(Song& song, double rate);
+  float get_artist_rate(string artist);
+  float get_genre_rate(string genre);
   ~Jukebox();
 private:
   Song** songs;

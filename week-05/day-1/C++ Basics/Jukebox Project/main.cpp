@@ -19,37 +19,29 @@ using namespace std;
 int main() {
   Pop* sting = new Pop("Sting", "Sun");
 
-  /*cout << "Artist: " << sting->get_artist() << endl;
-  cout << "Title: " << sting->get_title() << endl;
-  cout << "Genre: " << sting->get_genre() << endl;
-  sting->set_rate(1);
-  sting->set_rate(3);
-  sting->set_rate(5);
-  cout << "Average rate: " << sting->get_average_rate() << endl;
-  */
-
-// JUKEBOX START
-
-  Jukebox sting_jukebox;
-  sting_jukebox.add_song(*sting);
-  sting_jukebox.rate(*sting, 1);
-  sting_jukebox.rate(*sting, 3);
-  sting_jukebox.rate(*sting, 5);
+  Jukebox jukebox;
+  jukebox.add_song(*sting);
+  jukebox.rate(*sting, 1);
+  jukebox.rate(*sting, 3);
+  jukebox.rate(*sting, 5);
   cout << "Average rate for " << sting->get_title() << " from the artist " << sting->get_artist() << " is " << sting->get_average_rate() << "." << endl;
-
-// JUKEBOX END
+  cout << "Artist Rate - Sting: " << jukebox.get_artist_rate("Sting") << endl;
+  cout << "Genre Rate - Pop:  " << jukebox.get_genre_rate("Pop") << endl;
 
   delete sting;
   cout << endl;
 
   Rock* rea = new Rock("Chris Rea", "Moon");
-  cout << "Artist: " << rea->get_artist() << endl;
-  cout << "Title: " << rea->get_title() << endl;
-  cout << "Genre: " << rea->get_genre() << endl;
-  rea->set_rate(1);
-  rea->set_rate(2);
-  rea->set_rate(2);
-  cout << "Average rate: " << rea->get_average_rate() << endl;
+
+  jukebox.add_song(*rea);
+  jukebox.rate(*rea, 1);
+  jukebox.rate(*rea, 3);
+  jukebox.rate(*rea, 5);
+
+  cout << "Average rate for " << rea->get_title() << " from the artist " << rea->get_artist() << " is " << rea->get_average_rate() << "." << endl;
+  cout << "Artist Rate - Chris Rea: " << jukebox.get_artist_rate("Chris Rea") << endl;
+  cout << "Genre Rate - Rock: " << jukebox.get_genre_rate("Rock") << endl;
+
   delete rea;
   cout << endl;
 
