@@ -16,8 +16,8 @@ Usage::Usage() {
 void Usage::print_usage() {
   cout << endl << "CLI Todo application" << endl << "====================" << endl << endl;
   cout << "Command line arguments:" << endl;
-  cout << "-l   Lists all the the tasks" << endl << "-a   Adds a new task" << endl;
-  cout << "-r   Removes a task" << endl << "-c   Completes an task" << endl << endl;
+  cout << "-l   Lists all the tasks" << endl << "-a   Add new task" << endl;
+  cout << "-r   Remove task" << endl << "-c   Complete task" << endl << endl;
 }
 
 Usage::~Usage() {
