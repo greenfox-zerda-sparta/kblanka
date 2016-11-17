@@ -39,6 +39,15 @@ string Read_File::read_content() {
   return result;
 }
 
+int Read_File::is_empty() {
+  ifstream read("list.txt");
+  if(!read) return 0;
+  bool isEmpty = read.peek() == EOF;
+  if (isEmpty == true)
+    cout << "No todo for today!";
+  return 0;
+}
+
 
 Read_File::~Read_File() {
 

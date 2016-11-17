@@ -26,6 +26,7 @@ int main(int argc, char* argv[]) {
   if (input == "-l") {
     Read_File read;
     cout << read.read_content();
+    read.is_empty();
   }
 
   return 0;

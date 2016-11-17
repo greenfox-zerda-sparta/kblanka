@@ -17,6 +17,7 @@ class Read_File {
 public:
   Read_File();
   string read_content();
+  int is_empty();
   ~Read_File();
 };
 
