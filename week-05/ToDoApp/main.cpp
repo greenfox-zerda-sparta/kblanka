@@ -23,11 +23,11 @@ int main(int argc, char* argv[]) {
   string input;
   getline (cin,input);
 
-  if (argc == 1) {
+  if (argv[0] == 1) {
     Usage start;
     start.print_usage();
   }
-  if(input ==  "-l") {
+  if(argv[1] ==  "-l" ) {
       Read_File read;
       cout << read.read_content();
       read.is_empty();
@@ -37,12 +37,16 @@ int main(int argc, char* argv[]) {
     task.write_content();
   }
 
-  if(input == "-r") {
+  if(input == "-r" ) {
     RemoveTask remove;
     remove.countLine("list.txt");
     remove.removeLine("list.txt", 3);
   }
 
+  if(input == "-c") {
+    AddTask check;
+    check.check_in("list.txt", 5);
+  }
 
   return 0;
 }

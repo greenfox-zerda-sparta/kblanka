@@ -17,6 +17,9 @@ class AddTask {
 public:
   AddTask();
   void write_content();
+  void check_in(char* sourcefile, int line);
+  int countLine(char* sourcefile);
+  void replace_char(char& str, int n, char c);
   ~AddTask();
 };
 
