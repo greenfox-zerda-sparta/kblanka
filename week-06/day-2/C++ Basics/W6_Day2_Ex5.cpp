@@ -18,16 +18,14 @@ using namespace std;
 
 string* split(string a, char b) throw (const char*) {
   int length = a.size();
-  string array[length];
   int num = 0;
   string* result = new string[length];
   for (int i = 0; i < length; i++) {
     if (a[i] == b) {
-    //cout << array[num] << ' ';
     num++;
     i++;
     }
-    array[num] += a[i];
+    result[num] += a[i];
   }
   if (num == 0) {
     throw "Character not found.";
@@ -37,14 +35,16 @@ return result;
 
 int main() {
   try {
-   string my_string = "Larifarilalalilalilam";
-   string* q = split(my_string, 'a');
-   int length =  my_string.size();
+   string* my_array = split("Larifarilalalilalilam", 'a');
+   cout << "After split: " << endl;
+   int length = sizeof(*my_array);
    for (int i = 0; i < length; i++)
-     cout << my_string[i];
+     cout << my_array[i] << " ";
+   delete[] my_array;
   }
   catch (const char* excp) {
     cout << "Exception: " << excp << endl;
   }
   return 0;
 }
+
