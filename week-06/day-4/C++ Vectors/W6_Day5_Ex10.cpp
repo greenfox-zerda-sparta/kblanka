@@ -50,23 +50,32 @@ void ascending_order(vector<T>& newVector) {
 }
 
 int main() {
-  cout << "Enter a number: ";
-  cin >> a;
+  cout << "Enter a positive number: ";
+  try {
+    cin >> a;
+    if (a <= 0){
+      throw 0;
+    }
+    else {
+      cout << "Your Number: " << a << endl;
+      cout << "Number of divisors: " << divisor(a) << endl;
 
-  cout << "You Number: " << a << endl;
-  cout << "Number of divisors: " << divisor(a) << endl;
+      int div = divisor(a);
+      vector<double> myVector;
+      myVector.reserve(div);
 
-  int div = divisor(a);
-  vector<double> myVector;
-  myVector.reserve(div);
+      fill_vector_random(myVector);
+      cout << "Random numbers between 0 and " << a <<
+              " in the number of its divisors: ";
+      print_all(myVector);
 
-  fill_vector_random(myVector);
-  cout << "Random numbers between 0 and " << a << "in the number of its divisors: ";
-  print_all(myVector);
-
-  ascending_order(myVector);
-  cout << "In ascending order: ";
-  print_all(myVector);
+      ascending_order(myVector);
+      cout << "In ascending order: ";
+      print_all(myVector);
+    }
+  }catch(int x){
+    cout << "Error message: your number is not gretar than zero!" << endl;
+  }
 
 	//find how much integer divisor 2400 has
 	//create a vector of doubles, reserve place for the divisors of 2400
