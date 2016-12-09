@@ -8,6 +8,8 @@
 #ifndef BUTTON_H_
 #define BUTTON_H_
 #include <vector>
+#include "Game.h"
+
 using namespace std;
 
 class Button {
@@ -28,7 +30,8 @@ public:
   void X0_Y2_Z2();
   void X0_Y1_Z3();
   void X0_Y0_Z4();
-  void display(vector<unsigned int>& storageVector);
+  void button_up_down();
+  void display(vector<unsigned int>& StorageVector);
   virtual ~Button();
 };
 

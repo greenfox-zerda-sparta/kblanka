@@ -15,160 +15,120 @@ Button::Button() {
 }
 
 void Button::X4_Y0_Z0(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << endl;
-  cout << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X3_Y1_Z0(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << " " << "| OOO |" << endl;
-  cout << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << " " << "| OOO |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X3_Y0_Z1(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << " " << "|     |" << endl;
-  cout << "| XXX |" << " " << "| XXX |" << " " << "| XXX |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X2_Y2_Z0(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| XXX |" << " " << "| OOO |" << " " << "| OOO |" << endl;
-  cout << "| XXX |" << " " << "| XXX |" << " " << "| OOO |" << " " << "| OOO |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X2_Y1_Z1(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| XXX |" << " " << "| OOO |" << " " << "|     |" << endl;
-  cout << "| XXX |" << " " << "| XXX |" << " " << "| OOO |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X2_Y0_Z2(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| XXX |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "| XXX |" << " " << "| XXX |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X1_Y3_Z0(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << endl;
-  cout << "| XXX |" << " " << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X1_Y2_Z1(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| OOO |" << " " << "| OOO |" << " " << "|     |" << endl;
-  cout << "| XXX |" << " " << "| OOO |" << " " << "| OOO |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X1_Y1_Z2(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "| OOO |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "| XXX |" << " " << "| OOO |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X1_Y0_Z3(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| XXX |" << " " << "|     |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "| XXX |" << " " << "|     |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X0_Y4_Z0(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << endl;
-  cout << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X0_Y3_Z1(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << " " << "|     |" << endl;
-  cout << "| OOO |" << " " << "| OOO |" << " " << "| OOO |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X0_Y2_Z2(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| OOO |" << " " << "| OOO |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "| OOO |" << " " << "| OOO |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X0_Y1_Z3(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "| OOO |" << " " << "|     |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "| OOO |" << " " << "|     |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
 void Button::X0_Y0_Z4(){
-  cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
   cout << "|     |" << " " << "|     |" << " " << "|     |" << " " << "|     |" << endl;
-  cout << "|     |" << " " << "|     |" << " " << "|     |" << " " << "|     |" << endl;
+}
+
+void Button::button_up_down(){
   cout << "o-----o" << " " << "o-----o" << " " << "o-----o" << " " << "o-----o" << endl;
 }
 
-void Button::display(vector<unsigned int>& storageVector){
-  if (storageVector[0] == 4 && storageVector[1] == 0 && storageVector[2] == 0) {
-  Button::X4_Y0_Z0();
+void Button::display(vector<unsigned int>& StorageVector){
+  button_up_down();
+  for (int i = 0; i < 2; i++) {
+    if (StorageVector[0] == 4 && StorageVector[1] == 0 && StorageVector[2] == 0) {
+    Button::X4_Y0_Z0();
+    }
+    if (StorageVector[0] == 3 && StorageVector[1] == 1 && StorageVector[2] == 0) {
+    Button::X3_Y1_Z0();
+    }
+    if (StorageVector[0] == 3 && StorageVector[1] == 0 && StorageVector[2] == 1) {
+    Button::X3_Y0_Z1();
+    }
+    if (StorageVector[0] == 2 && StorageVector[1] == 2 && StorageVector[2] == 0) {
+    Button::X2_Y2_Z0();
+    }
+    if (StorageVector[0] == 2 && StorageVector[1] == 1 && StorageVector[2] == 1) {
+    Button::X2_Y1_Z1();
+    }
+    if (StorageVector[0] == 2 && StorageVector[1] == 0 && StorageVector[2] == 2) {
+    Button::X2_Y0_Z2();
+    }
+    if (StorageVector[0] == 1 && StorageVector[1] == 3 && StorageVector[2] == 0) {
+    Button::X1_Y3_Z0();
+    }
+    if (StorageVector[0] == 1 && StorageVector[1] == 2 && StorageVector[2] == 1) {
+    Button::X1_Y2_Z1();
+    }
+    if (StorageVector[0] == 1 && StorageVector[1] == 1 && StorageVector[2] == 2) {
+    Button::X1_Y1_Z2();
+    }
+    if (StorageVector[0] == 1 && StorageVector[1] == 0 && StorageVector[2] == 3) {
+    Button::X1_Y0_Z3();
+    }
+    if (StorageVector[0] == 0 && StorageVector[1] == 4 && StorageVector[2] == 0) {
+    Button::X0_Y4_Z0();
+    }
+    if (StorageVector[0] == 0 && StorageVector[1] == 3 && StorageVector[2] == 1) {
+    Button::X0_Y3_Z1();
+    }
+    if (StorageVector[0] == 0 && StorageVector[1] == 2 && StorageVector[2] == 2) {
+    Button::X0_Y2_Z2();
+    }
+    if (StorageVector[0] == 0 && StorageVector[1] == 1 && StorageVector[2] == 3) {
+    Button::X0_Y1_Z3();
+    }
+    if (StorageVector[0] == 0 && StorageVector[1] == 0 && StorageVector[2] == 4) {
+    Button::X0_Y0_Z4();
+    }
   }
-  if (storageVector[0] == 3 && storageVector[1] == 1 && storageVector[2] == 0) {
-  Button::X3_Y1_Z0();
-  }
-  if (storageVector[0] == 3 && storageVector[1] == 0 && storageVector[2] == 1) {
-  Button::X3_Y0_Z1();
-  }
-  if (storageVector[0] == 2 && storageVector[1] == 2 && storageVector[2] == 0) {
-  Button::X2_Y2_Z0();
-  }
-  if (storageVector[0] == 2 && storageVector[1] == 1 && storageVector[2] == 1) {
-  Button::X2_Y1_Z1();
-  }
-  if (storageVector[0] == 2 && storageVector[1] == 0 && storageVector[2] == 2) {
-  Button::X2_Y0_Z2();
-  }
-  if (storageVector[0] == 1 && storageVector[1] == 3 && storageVector[2] == 0) {
-  Button::X1_Y3_Z0();
-  }
-  if (storageVector[0] == 1 && storageVector[1] == 2 && storageVector[2] == 1) {
-  Button::X1_Y2_Z1();
-  }
-  if (storageVector[0] == 1 && storageVector[1] == 1 && storageVector[2] == 2) {
-  Button::X1_Y1_Z2();
-  }
-  if (storageVector[0] == 1 && storageVector[1] == 0 && storageVector[2] == 3) {
-  Button::X1_Y0_Z3();
-  }
-  if (storageVector[0] == 0 && storageVector[1] == 4 && storageVector[2] == 0) {
-  Button::X0_Y4_Z0();
-  }
-  if (storageVector[0] == 0 && storageVector[1] == 3 && storageVector[2] == 1) {
-  Button::X0_Y3_Z1();
-  }
-  if (storageVector[0] == 0 && storageVector[1] == 2 && storageVector[2] == 2) {
-  Button::X0_Y2_Z2();
-  }
-  if (storageVector[0] == 0 && storageVector[1] == 1 && storageVector[2] == 3) {
-  Button::X0_Y1_Z3();
-  }
-  if (storageVector[0] == 0 && storageVector[1] == 0 && storageVector[2] == 4) {
-  Button::X0_Y0_Z4();
-  }
-
-
+  button_up_down();
 }
-
 
 Button::~Button() {
 
