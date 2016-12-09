@@ -18,10 +18,10 @@ using namespace std;
 class Game {
 public:
   Game();
-  int fill_vector_random(vector<int>& newVector);
-  void print_all(vector<int>& newVector);
-  void input_num(vector<int>& newVector);
-  void compare_vectors(vector<int>& firstVector, vector<int>& secondVector, vector<int>& storageVector);
+  unsigned int fill_vector_random(vector<unsigned int>& newVector);
+  void print_all(vector<unsigned int>& newVector);
+  void input_num(vector<unsigned int>& newVector);
+  void compare_vectors(vector<unsigned int>& firstVector, vector<unsigned int>& secondVector, vector<unsigned int>& storageVector);
   virtual ~Game();
 };
 

@@ -17,7 +17,7 @@ Game::Game() {
   // TODO Auto-generated constructor stub
 }
 
-int Game::fill_vector_random(vector<int>& newVector) {
+unsigned int Game::fill_vector_random(vector<unsigned int>& newVector) {
   srand (time(NULL));
   int b;
   for (int i =0; i < 4; i++){
@@ -27,7 +27,7 @@ int Game::fill_vector_random(vector<int>& newVector) {
   return b;
 }
 
-void Game::print_all(vector<int>& newVector) {
+void Game::print_all(vector<unsigned int>& newVector) {
   cout << "The elements of the vector: ";
   for (unsigned int i = 0; i < newVector.size(); i++) {
     cout << newVector[i] << " ";
@@ -35,7 +35,7 @@ void Game::print_all(vector<int>& newVector) {
   cout << endl;
 }
 
-void Game::input_num(vector<int>& newVector) {
+void Game::input_num(vector<unsigned int>& newVector) {
   cout << "Enter your number: " << endl;
   int input;
   while(newVector.size() != 4) {
@@ -44,8 +44,8 @@ void Game::input_num(vector<int>& newVector) {
   }
 }
 
-void Game::compare_vectors(vector<int>& firstVector, vector<int>& secondVector, vector<int>& storageVector) {
-  int Y = 0, X = 0; // X = done, good place - good number; Y = almost, wrong place - good number
+void Game::compare_vectors(vector<unsigned int>& firstVector, vector<unsigned int>& secondVector, vector<unsigned int>& storageVector) {
+  int Y = 0, X = 0, Z = 0;// X = done, good place - good number; Y = almost, wrong place - good number; Z = zero, nothing
   if(firstVector[1]==secondVector[1]) ++X;
   else
   {
@@ -74,10 +74,10 @@ void Game::compare_vectors(vector<int>& firstVector, vector<int>& secondVector, 
       if (firstVector[0]==secondVector[3]) Y++;
       if (firstVector[0]==secondVector[1]) Y++;
   }
-  /*cout << "X: " << X << endl;
-  cout << "Y: " << Y << endl;*/
   storageVector.push_back(X);
   storageVector.push_back(Y);
+  Z = 4 - X - Y;
+  storageVector.push_back(Z);
 }
 
 Game::~Game() {
