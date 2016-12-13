@@ -4,14 +4,15 @@
 
 using namespace std;
 
-void letter_counter(string word) {
-  map <char, int> counter; // needs #include <map>
+map <char, int> letter_counter(string word) {
+  map <char, int> counter;
   for (unsigned int i = 0; i < word.size(); i++ ) {// chars in the string
        counter[ word[i] ] ++;
   }
   for(map <char, int>::iterator it = counter.begin(); it != counter.end(); ++it) {
       std::cout << it->first << " " << it->second << " " << endl;
   }
+  return counter;
 }
 
 int main() {
