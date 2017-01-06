@@ -6,11 +6,10 @@
 #include <SDL.h>
 
 void draw_sierpinski(draw& d, SDL_Renderer* renderer, int line_lenght);
-void draw_randomsize_sierpinski(draw& d, SDL_Renderer* renderer, int triangle_side);
+void draw_randomsize_sierpinski_hexagon(draw& d, SDL_Renderer* renderer, int triangle_side);
 
 int main(int argc, char ** argv) {
-	srand(time(NULL));
-	int triangle_side = rand() % 300 + 1;
+
 	bool quit = false;
 	SDL_Event event;
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -25,9 +24,19 @@ int main(int argc, char ** argv) {
 		case SDL_QUIT:
 			quit = true;
 			break;
+		case SDL_MOUSEBUTTONDOWN:
+			quit = false;
+			draw d;
+			SDL_PumpEvents();
+			int x, y;
+			if (SDL_GetMouseState(&x, &y) & SDL_BUTTON(SDL_BUTTON_LEFT)) {
+				d.MoveTo(x, y);
+				srand(time(NULL));
+				int triangle_side = rand() % 100;
+				draw_randomsize_sierpinski_hexagon(d, renderer, triangle_side);
+			}
+			break;
 		}
-		draw d;
-		draw_randomsize_sierpinski(d, renderer, triangle_side);		
 	}
 	SDL_RenderPresent(renderer);
 	SDL_DestroyRenderer(renderer);
@@ -36,10 +45,9 @@ int main(int argc, char ** argv) {
 	return 0;
 }
 
-void draw_randomsize_sierpinski(draw& d, SDL_Renderer* renderer, int triangle_side) {
+void draw_randomsize_sierpinski_hexagon(draw& d, SDL_Renderer* renderer, int triangle_side) {
 	if (triangle_side > 1) {
 		for (int j = 0; j < 6; j++) {
-			d.MoveTo(400, 400);
 			d.TurnTo(60);
 			draw_sierpinski(d, renderer, triangle_side);
 		}
@@ -49,11 +57,12 @@ void draw_randomsize_sierpinski(draw& d, SDL_Renderer* renderer, int triangle_si
 void draw_sierpinski(draw& d, SDL_Renderer* renderer, int triangle_side) {
 	if (triangle_side > 1) {
 		srand(time(NULL));
-		int x = rand() % 255 + 1;
-		int y = rand() % 255 + 1;
-		int z = rand() % 255 + 1;
+		int r = rand() % 255;
+		int g = rand() % 255;
+		int b = rand() % 255;
+		int alpha = rand() % 255;
 		for (int i = 0; i < 3; i++) {
-			SDL_SetRenderDrawColor(renderer, x, y, z, 0);
+			SDL_SetRenderDrawColor(renderer, r, g, b, alpha);
 			d.DrawBy(renderer, triangle_side);
 			d.TurnTo(120);
 			draw_sierpinski(d, renderer, triangle_side / 2);
