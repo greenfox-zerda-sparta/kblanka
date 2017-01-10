@@ -22,6 +22,7 @@ Reindeer::Reindeer() {
   type = "";
   max_present_carry = 0;
   present = 0;
+	health_status = 0;
 }
 
 void Reindeer::feed_reindeer(unsigned int& hay_storage) { //kell ide kukac?
@@ -60,9 +61,14 @@ string Reindeer::getStatus() {
 void Reindeer::go_to_work() {
   present = 0;
   hay = 0;
+	health_status -= 1;
 }
+
+int Reindeer::get_health_status() {
+  return health_status;
+}
+
 
 Reindeer::~Reindeer() {
 
 }
-

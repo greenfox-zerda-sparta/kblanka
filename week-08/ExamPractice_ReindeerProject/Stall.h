@@ -4,7 +4,7 @@
  *  Created on: 2016. dec. 15.
  *      Author: Tecra_Z50
  */
-
+#pragma warning( disable : 4290 )
 #ifndef STALL_H_
 #define STALL_H_
 #include <vector>

@@ -13,6 +13,7 @@ NormalNose::NormalNose() : Reindeer(){
   this->type = "NormalNose";
   this->max_hay = 3;
   this->max_present_carry = 15;
+  this->health_status = 2;
 }
 
 NormalNose::~NormalNose() {

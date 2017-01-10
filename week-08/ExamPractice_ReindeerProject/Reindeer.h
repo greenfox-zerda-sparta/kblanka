@@ -14,7 +14,7 @@ using namespace std;
 class Reindeer {
 protected:
   string type;
-  unsigned int hay, max_hay, max_present_carry, present;
+  unsigned int hay, max_hay, max_present_carry, present, health_status;
 public:
   Reindeer();
   void feed_reindeer(unsigned int& hay_storage);
@@ -22,6 +22,7 @@ public:
   void go_to_work();
   string getType();
   string getStatus();
+	int get_health_status();
   virtual ~Reindeer();
 };
 

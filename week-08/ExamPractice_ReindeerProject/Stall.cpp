@@ -4,6 +4,7 @@
  *  Created on: 2016. dec. 15.
  *      Author: Tecra_Z50
  */
+#pragma warning( disable : 4290 )
 #include <iostream>
 #include "Stall.h"
 #include "ToString.h"
@@ -64,7 +65,7 @@ void Stall::add_present_to_reindeers() throw(const char*) {
     add_present_to_NormalNose();
   }
   else {
-    throw "No more present in the storage, christmas is over.";
+    throw "No more present in the storage, Christmas is over.";
   }
 }
 

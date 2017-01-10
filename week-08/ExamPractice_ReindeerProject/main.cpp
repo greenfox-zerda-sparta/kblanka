@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : Reindeer_Project.cpp
-// Author      : 
+// Author      :
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
@@ -52,6 +52,8 @@ cout << Liza.getStatus() << endl;
 
   cout << first.getStatus() << endl;
 
+  first.christmas_time();
+  first.christmas_time();
   first.christmas_time();
 
   cout << first.getStatus() << endl;

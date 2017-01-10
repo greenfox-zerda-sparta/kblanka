@@ -13,6 +13,7 @@ RedNose::RedNose() : Reindeer() {
   this->type = "RedNose";
   this->max_hay = 5;
   this->max_present_carry = 30;
+  this->health_status = 15;
 }
 
 RedNose::~RedNose() {
