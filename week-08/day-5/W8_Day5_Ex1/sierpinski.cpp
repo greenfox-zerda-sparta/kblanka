@@ -92,7 +92,7 @@ void Sierpinski::draw_sierpinski_hexagon(draw& d, SDL_Renderer* renderer, int tr
 
 //Star wint hexagons (based on Sierpinski Triangle) function
 
-void Sierpinski::draw_sierpinski_hexagonstar(draw& d, SDL_Renderer* renderer, int triangle_side) {
+void Sierpinski::draw_sierpinski_hexagonal_star_rotate(draw& d, SDL_Renderer* renderer, int triangle_side) {
   if (triangle_side > 0) {
     for (int i = 0; i < 6; i++) {
       int r = rand() % 255;
@@ -102,7 +102,7 @@ void Sierpinski::draw_sierpinski_hexagonstar(draw& d, SDL_Renderer* renderer, in
       d.DrawBy(renderer, triangle_side);
       d.MoveBy(-(triangle_side / 3));
       d.TurnTo(-60);
-      draw_sierpinski_hexagonstar(d, renderer, triangle_side / 3);
+      draw_sierpinski_hexagonal_star_rotate(d, renderer, triangle_side / 3);
       draw_sierpinski(d, renderer, triangle_side / 2);
     }
   }
