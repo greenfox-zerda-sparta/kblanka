@@ -11,6 +11,6 @@ public:
   void draw_sierpinski_hexagonal_star_extra(draw& d, SDL_Renderer* renderer, int triangle_side);
   void draw_sierpinski_windmill(draw& d, SDL_Renderer* renderer, int triangle_side);
   void draw_sierpinski_hexagon(draw& d, SDL_Renderer* renderer, int triangle_side);
-  void draw_sierpinski_hexagonstar(draw& d, SDL_Renderer* renderer, int triangle_side);
+  void draw_sierpinski_hexagonal_star_rotate(draw& d, SDL_Renderer* renderer, int triangle_side);
   ~Sierpinski();
 };
