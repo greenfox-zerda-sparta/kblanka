@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include <stdlib.h>     /* srand, rand */
+#include <stdlib.h>     
 #include <time.h>
 #include <SDL.h>
 #include "draw.h"
@@ -10,7 +10,8 @@
 using namespace std;
 
 int main(int argc, char ** argv) {
-  int brush_num = 0; //default value
+  int brush_num_form = 0; //default value
+  int brush_num_size = 0; //default value
   int x, y; //coordinates
   bool quit = false;
   SDL_Event event;
@@ -42,63 +43,70 @@ int main(int argc, char ** argv) {
       draw d;
       SDL_PumpEvents();
       if (SDL_GetMouseState(&x, &y) & SDL_BUTTON(SDL_BUTTON_LEFT)) {
-        SDL_Rect box;
-        box.x = 725;
-        box.y = 0;
-        box.w = 75;
-        box.h = 75;
-       
-        int move_y = 75;
-        if ((x > box.x) && (x < box.x + box.w) && (y > box.y) && (y < box.y + 5*move_y)) {
-        brush_num = ((y - box.y) / move_y) + 1;
+        SDL_Rect brush_box;
+        brush_box.x = 725;
+        brush_box.y = 0;
+        brush_box.w = 75;
+        brush_box.h = 75;
+        int brush_move_y = 75;
+        SDL_Rect size_box;
+        size_box.x = 0;
+        size_box.y = 0;
+        size_box.w = 50;
+        size_box.h = 30;
+        int size_move_y = 30;
+        if ((x > brush_box.x) && (x < brush_box.x + brush_box.w) && (y > brush_box.y) && (y < brush_box.y + 5 * brush_move_y)) {
+          brush_num_form = ((y - brush_box.y) / brush_move_y) + 1;
         }
-       /* if ((x > box.x) && (x < box.x + box.w) && (y > box.y) && (y < box.y + box.h)) {
-        brush_num = 1;
+        else if ((x > size_box.x) && (x < size_box.x + size_box.w) && (y > size_box.y) && (y < size_box.y + 3 * size_move_y)) {
+          brush_num_size = ((y - size_box.y) / size_move_y) + 1;
         }
-        if ((x > box.x) && (x < box.x + box.w) && (y > box.y + move_y) && (y < box.y + move_y + box.h)) {
-        brush_num = 2;
-        }
-        if ((x > box.x) && (x < box.x + box.w) && (y > box.y + (2 * move_y)) && (y < box.y + (2 * move_y) + box.h)) {
-        brush_num = 3;
-        }
-        if ((x > box.x) && (x < box.x + box.w) && (y > box.y + (3 * move_y)) && (y < box.y + (3 * move_y) + box.h)) {
-        brush_num = 4;
-        }
-        if ((x > box.x) && (x < box.x + box.w) && (y > box.y + (4 * move_y)) && (y < box.y + (4 * move_y) + box.h)) {
-        brush_num = 5;
-        }*/
-      else if (brush_num > 0 && brush_num < 6){
-        /*if (SDL_GetMouseState(&x, &y) & SDL_BUTTON(SDL_BUTTON_LEFT)) {*/
-        d.MoveTo(x, y);
-        Sierpinski makeit;
-        switch (brush_num) {
+        else if (brush_num_size > 0 && brush_num_size < 4 && brush_num_form > 0 && brush_num_form < 6) {
+          d.MoveTo(x, y);
+          Sierpinski makeit;
+          if (brush_num_form == 2 && brush_num_size == 1) {
+            makeit.draw_sierpinski_diamond(d, renderer, 90);
+          }
+          else if (brush_num_form == 2 && brush_num_size == 2) {
+            makeit.draw_sierpinski_diamond(d, renderer, 60);
+          }
+          else if (brush_num_form == 2 && brush_num_size == 3) {
+            makeit.draw_sierpinski_diamond(d, renderer, 30);
+          }
+
+          /*switch (brush_num_form) {
           case 1:
-          makeit.draw_sierpinski(d, renderer, 50);
-          break;
+            makeit.draw_sierpinski(d, renderer, 50);
+            break;
           case 2:
-          makeit.draw_sierpinski_diamond(d, renderer, 50);
-          break;
+            makeit.draw_sierpinski_diamond(d, renderer, 50);
+            break;
           case 3:
-          makeit.draw_sierpinski_hexagonal_star(d, renderer, 50);
-          break;
+            makeit.draw_sierpinski_hexagonal_star(d, renderer, 50);
+            break;
           case 4:
-          makeit.draw_sierpinski_hexagonal_star_extra(d, renderer, 50);
-          break;
+            makeit.draw_sierpinski_hexagonal_star_extra(d, renderer, 50);
+            break;
           case 5:
-          makeit.draw_sierpinski_hexagonal_star_rotate(d, renderer, 50);
-          break;
-        //default:
-       // }
-       }
-      }
+            makeit.draw_sierpinski_hexagonal_star_rotate(d, renderer, 50);
+            break;
+          }
+          switch (brush_num_size) {
+          case 1:
+            makeit.draw_sierpinski(d, renderer, 90);
+            break;
+            case 2:
+            makeit.draw_sierpinski(d, renderer, 60);
+            break;
+            case 3:
+            makeit.draw_sierpinski(d, renderer, 30);
+            break;
+            }*/
+        }
         break;
       }
     }
-    //SDL_UpdateWindowSurface(gWindow);
   }
-  
-
-  //Free resources and close SDL
   SDL_RenderPresent(renderer);
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(gWindow);
