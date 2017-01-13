@@ -54,7 +54,7 @@ int main(int argc, char ** argv) {
         size_box.y = 0;
         size_box.w = 50;
         size_box.h = 30;
-        int size_move_y = 30;
+        int size_move_y = 40;
         if ((x > brush_box.x) && (x < brush_box.x + brush_box.w) && (y > brush_box.y) && (y < brush_box.y + 5 * brush_move_y)) {
           brush_num_form = ((y - brush_box.y) / brush_move_y) + 1;
         }
@@ -64,44 +64,26 @@ int main(int argc, char ** argv) {
         else if (brush_num_size > 0 && brush_num_size < 4 && brush_num_form > 0 && brush_num_form < 6) {
           d.MoveTo(x, y);
           Sierpinski makeit;
-          if (brush_num_form == 2 && brush_num_size == 1) {
-            makeit.draw_sierpinski_diamond(d, renderer, 90);
+          //First Form Variations
+          if (brush_num_form == 1 && brush_num_size > 0 && brush_num_size < 4) {
+            makeit.draw_sierpinski(d, renderer, brush_num_size * 30);
           }
-          else if (brush_num_form == 2 && brush_num_size == 2) {
-            makeit.draw_sierpinski_diamond(d, renderer, 60);
+          //Second Form Variations
+          else if (brush_num_form == 2 && brush_num_size > 0 && brush_num_size < 4) {
+            makeit.draw_sierpinski_diamond(d, renderer, brush_num_size * 30);
           }
-          else if (brush_num_form == 2 && brush_num_size == 3) {
-            makeit.draw_sierpinski_diamond(d, renderer, 30);
+          //Third Form Variations
+          else if (brush_num_form == 3 && brush_num_size > 0 && brush_num_size < 4) {
+            makeit.draw_sierpinski_hexagonal_star(d, renderer, brush_num_size * 30);
           }
-
-          /*switch (brush_num_form) {
-          case 1:
-            makeit.draw_sierpinski(d, renderer, 50);
-            break;
-          case 2:
-            makeit.draw_sierpinski_diamond(d, renderer, 50);
-            break;
-          case 3:
-            makeit.draw_sierpinski_hexagonal_star(d, renderer, 50);
-            break;
-          case 4:
-            makeit.draw_sierpinski_hexagonal_star_extra(d, renderer, 50);
-            break;
-          case 5:
-            makeit.draw_sierpinski_hexagonal_star_rotate(d, renderer, 50);
-            break;
+          //Fourth Form Variations
+          else if (brush_num_form == 4 && brush_num_size > 0 && brush_num_size < 4) {
+            makeit.draw_sierpinski_hexagonal_star_extra(d, renderer, brush_num_size * 30);
           }
-          switch (brush_num_size) {
-          case 1:
-            makeit.draw_sierpinski(d, renderer, 90);
-            break;
-            case 2:
-            makeit.draw_sierpinski(d, renderer, 60);
-            break;
-            case 3:
-            makeit.draw_sierpinski(d, renderer, 30);
-            break;
-            }*/
+          //Fifth Form Variations
+          else if (brush_num_form == 5 && brush_num_size > 0 && brush_num_size < 4) {
+            makeit.draw_sierpinski_hexagonal_star_rotate(d, renderer, brush_num_size * 30);
+          }
         }
         break;
       }
