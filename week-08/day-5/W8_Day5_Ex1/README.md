@@ -1,15 +1,15 @@
-# Colorful Vectors
+# Project Title
 
-Sierpinski Vector Drawing Program
+Fractal Drawing Program.
 
 ## Getting Started
 
-Simple vector drawing program, created with SDL2. 
+Simple fractal drawing program, created with SDL2. Fractals are based on the Sierpienski Triangle and its variables.
 
-### Background Screenshot
+### Screenshot
 
-->![Alt text](https://github.com/greenfox-zerda-sparta/kblanka/blob/master/week-08/day-5/W8_Day5_Ex1/background_fractal2.bmp
-"Background")<-
+![Alt text](https://github.com/greenfox-zerda-sparta/kblanka/blob/master/week-08/day-5/W8_Day5_Ex1/Sample.PNG
+"Sample")
 
 
 

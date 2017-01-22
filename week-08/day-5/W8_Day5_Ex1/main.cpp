@@ -5,7 +5,6 @@
 #include <SDL.h>
 #include "draw.h"
 #include "sierpinski.h"
-#include "game-engine.hpp"
 
 using namespace std;
 
