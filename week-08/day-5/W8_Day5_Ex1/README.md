@@ -4,7 +4,7 @@ Fractal Drawing Program.
 
 ## Getting Started
 
-Simple fractal drawing program, created with SDL2. Fractals are based on the Sierpienski Triangle and its variables.
+Simple fractal drawing program, created with SDL2. Fractals are based on the Sierpinski Triangle and its variables.
 
 ### Screenshot
 
