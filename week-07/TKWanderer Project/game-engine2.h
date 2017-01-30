@@ -1,7 +1,7 @@
+// #pragma once
 #ifndef GAME_ENGINE_H
 #define GAME_ENGINE_H
-
-#include "SDL.h"
+#include <SDL.h>
 #include <map>
 #include <string>
 
@@ -13,37 +13,44 @@
 
 class GameContext {
 private:
-  SDL_Surface* screen;
-  std::map<std::string, SDL_Surface*> sprites;
+  SDL_Window* screen;
+  SDL_Renderer* renderer;
+  std::map<std::string, SDL_Texture*> sprites;
   bool keys[5];
 public:
   GameContext(unsigned int screen_width, unsigned int screen_height) {
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_WM_SetCaption("Game", "Game");
-    screen = SDL_SetVideoMode(screen_width, screen_height, 0, 0);
+    screen = SDL_CreateWindow("My Game Window",
+      SDL_WINDOWPOS_UNDEFINED,
+      SDL_WINDOWPOS_UNDEFINED,
+      screen_width, screen_height,
+      0);
+    renderer = SDL_CreateRenderer(screen, -1, 0);
     reset_keys();
   }
+  
   ~GameContext() {
-    for (std::map<std::string, SDL_Surface*>::iterator it = sprites.begin(); it != sprites.end(); ++it) {
-      SDL_FreeSurface(it->second);
+    for (std::map<std::string, SDL_Texture*>::iterator it = sprites.begin(); it != sprites.end(); ++it) {
+      SDL_DestroyTexture(it->second);
     }
     SDL_Quit();
   }
   void load_file(std::string name) {
-    SDL_Surface* temp = SDL_LoadBMP(name.c_str());
-    sprites[name] = SDL_DisplayFormat(temp);
-    SDL_FreeSurface(temp);
-    int colorkey = SDL_MapRGB(screen->format, 255, 0, 255);
-    SDL_SetColorKey(sprites[name], SDL_SRCCOLORKEY | SDL_RLEACCEL, colorkey);
+    SDL_Surface* result = SDL_LoadBMP(name.c_str());
+    SDL_SetColorKey(result, SDL_TRUE, SDL_MapRGB(SDL_AllocFormat(SDL_GetWindowPixelFormat(screen)), 0xFF, 0, 0xFF));
+    sprites[name] = SDL_CreateTextureFromSurface(renderer, result);
+    SDL_FreeSurface(result);
   }
   void draw_sprite(std::string name, int x, int y) {
     SDL_Rect temp;
     temp.x = x;
     temp.y = y;
-    SDL_BlitSurface(sprites[name], NULL, screen, &temp);
+    temp.w = 72;
+    temp.h = 72;
+    SDL_RenderCopy(renderer, sprites[name], NULL, &temp);
   }
   void render() {
-    SDL_UpdateRect(screen, 0, 0, 0, 0);
+    SDL_RenderPresent(renderer);
   }
   void reset_keys() {
     for (unsigned int i = 0; i < 5; ++i) {
@@ -84,32 +91,32 @@ public:
       context->reset_keys();
       if (SDL_PollEvent(&event)) {
         switch (event.type) {
-          case SDL_QUIT:
+        case SDL_QUIT:
+          gameover = 1;
+          break;
+        case SDL_KEYDOWN:
+          switch (event.key.keysym.sym) {
+          case SDLK_ESCAPE:
+          case SDLK_q:
             gameover = 1;
             break;
-          case SDL_KEYDOWN:
-            switch (event.key.keysym.sym) {
-              case SDLK_ESCAPE:
-              case SDLK_q:
-                gameover = 1;
-                break;
-              case SDLK_LEFT:
-                context->on_key_down(ARROW_LEFT);
-                break;
-              case SDLK_RIGHT:
-                context->on_key_down(ARROW_RIGHT);
-                break;
-              case SDLK_UP:
-                context->on_key_down(ARROW_UP);
-                break;
-              case SDLK_DOWN:
-                context->on_key_down(ARROW_DOWN);
-                break;
-              case SDLK_SPACE:
-                context->on_key_down(SPACE);
-                break;
-            }
+          case SDLK_LEFT:
+            context->on_key_down(ARROW_LEFT);
             break;
+          case SDLK_RIGHT:
+            context->on_key_down(ARROW_RIGHT);
+            break;
+          case SDLK_UP:
+            context->on_key_down(ARROW_UP);
+            break;
+          case SDLK_DOWN:
+            context->on_key_down(ARROW_DOWN);
+            break;
+          case SDLK_SPACE:
+            context->on_key_down(SPACE);
+            break;
+          }
+          break;
         }
       }
       game->render(*context);
